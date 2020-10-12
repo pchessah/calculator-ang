@@ -1,0 +1,23 @@
+.card{
+    top: 50%;
+    left: 50%;
+    position: absolute;
+    transform: translate(-50%, -50%);
+}
+
+.keys{
+    border-width: 0.01px;
+    border-style: solid;
+    border-radius: 0;
+    border-color: black;
+    background-color: white;
+}
+
+input{
+    background-color: aliceblue;
+}
+
+.title{
+    font-weight: 900;
+    text-align: center;
+}
