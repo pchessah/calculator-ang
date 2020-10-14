@@ -1,6 +1,16 @@
 <div class="card">
   <div class="title"> Calculator</div>
-  <input type="number" [(ngModel)]="keyBoardVals" [value]="vals">
+  <!-- <input type="number"> -->
+ <div class="valueField">{{vals}}</div>
+ <div>{{operator}}</div>
+ 
+ <div class="container">
+  <div class="row">
+    <input type="button" class="col-3 btn keys" *ngFor="let operator of operators;" [value]="operator"
+      (click)="enteredOperator(operator)">
+  </div>
+</div>
+<br>
 
   <div class="container">
     <div class="row">
@@ -9,4 +19,18 @@
     </div>
   </div>
 
+  <br>
+
+  <div class="container">
+    <div class="row">
+      <input type="button" class="btn btn-success col-4" (click)="compute()" value="=">
+      <input type="button" class="btn btn-danger col-4" (click)="clear()" value="Clear">
+      <input type="button" class="btn btn-outline-danger col-4" (click)="deleteOne()" value="Delete">
+    </div>
+  </div>
+
+  
+
+
 </div>
+
