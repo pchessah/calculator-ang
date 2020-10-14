@@ -3,21 +3,53 @@
     left: 50%;
     position: absolute;
     transform: translate(-50%, -50%);
+    padding: 20px 10px;
+    background-color: #ced7cd;
+    width: 50%;
 }
 
 .keys{
     border-width: 0.01px;
     border-style: solid;
-    border-radius: 0;
-    border-color: black;
+    border-radius: 5px;
+    border-color: grey;
     background-color: white;
+    width: 5px;
+    margin: 2px;
 }
 
+.operator-keys{
+    border-width: 0.01px;
+    border-style: solid;
+    border-radius: 5px;
+    border-color: grey;
+    background-color: white;
+    width: 5px;
+    margin: 10px 2px -15px 2px;
+
+}
 .valueField{
     background-color: aliceblue;
+    padding: 5px 5px 10px 5px;
+    display: flex;
+    flex-direction: column;
+    height: 55px;  
 }
 
-.title{
-    font-weight: 900;
-    text-align: center;
+
+
+.footer-btns button{
+    width: 5px;
+    margin: 2px;
 }
+
+.footer-btns{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap !important;
+}
+
+.btn-outline-danger{
+    color: white !important;
+}
+

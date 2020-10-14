@@ -1,20 +1,20 @@
 <div class="card">
-  <div class="title"> Calculator</div>
-  <!-- <input type="number"> -->
- <div class="valueField">{{vals}}</div>
- <div>{{operator}}</div>
+ <div class="valueField">
+   <span>{{vals}}</span>
+   <span class="operator">{{operator}}</span>  
+  </div>
  
  <div class="container">
-  <div class="row">
-    <input type="button" class="col-3 btn keys" *ngFor="let operator of operators;" [value]="operator"
+  <div class="row justify-content-center">
+    <input type="button" class="col-2 btn operator-keys" *ngFor="let operator of operators;" [value]="operator"
       (click)="enteredOperator(operator)">
   </div>
 </div>
 <br>
 
   <div class="container">
-    <div class="row">
-      <input type="button" class="col-4 btn keys" *ngFor="let num of keys; let i = index" [value]="num"
+    <div class="row justify-content-center">
+      <input type="button" class="col-3 btn keys" *ngFor="let num of keys; let i = index" [value]="num"
         (click)="enteredVal(num)">
     </div>
   </div>
@@ -22,10 +22,10 @@
   <br>
 
   <div class="container">
-    <div class="row">
-      <input type="button" class="btn btn-success col-4" (click)="compute()" value="=">
-      <input type="button" class="btn btn-danger col-4" (click)="clear()" value="Clear">
-      <input type="button" class="btn btn-outline-danger col-4" (click)="deleteOne()" value="Delete">
+    <div class="row footer-btns justify-content-center">
+      <button type="button" class="btn btn-success col-3" (click)="compute()" value="="> = </button>
+      <button type="button" class="btn btn-danger col-3" (click)="clear()" value="Clear"> Clear </button>
+      <button type="button" class="btn btn-outline-dark col-3" (click)="deleteOne()" value="Delete"> Delete </button>
     </div>
   </div>
 
